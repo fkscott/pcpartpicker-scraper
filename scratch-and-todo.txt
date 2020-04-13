@@ -1,10 +1,9 @@
+ideas and such go here...
+
 SCRATCH
-
-headers = Component, Selection, Price, Where, Link
-
+headers = Component, Selection, Price, Link
 
 TODO
     add links to csv file
-    add merchants to csv file
     pull from live webpage
 

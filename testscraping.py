@@ -1,11 +1,14 @@
-#test scraping a parts list with a downloaded pcpartpicker page
+#pulling from live websites
+import requests
 from bs4 import BeautifulSoup
 from csv import writer
 
+url = raw_input("please a pcpartpicker list url (formatted pcpartpicker.com/list/) : ")
+
 #open the test file and read its contents into a soup objet
-with open("pcpartpicker-test-page.html","r") as f:
-    contents = f.read()
-    soup = BeautifulSoup(contents,'html.parser')
+response = requests.get(url)
+
+soup = BeautifulSoup(response.text,'html.parser')
 
 #find the partlist div and store as plaintext
 components = soup.find_all(class_="tr__product")

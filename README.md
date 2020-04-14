@@ -1,11 +1,8 @@
-# pcpartpicker-scraper
+## pcpartpicker-scraper
 converts pcpartpicker lists into csv files
-you will need bs4 (beautifulsoup) to run `testscraping.py`
-    - to install using pip: `pip install bs4`
 
-## whats working
-`testscraping.py` parses the contents of `pcpartpicker-test-page.html` into plain text creating a csv with columns for the component type, component name, and price of the component
+# whats working
+`testscraping.py` parses the contents of `pcpartpicker-test-page.html` into plain text creating a csv with columns for the component type, component name, price of the component, and the link to every site which the component can be found
 
-## whats not working
-1. pull links to merchants from `pcpartpicker-test-page.html`
-2. request data from live webpages
+# whats not working
+1. request data from live webpages

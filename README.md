@@ -2,7 +2,9 @@
 converts pcpartpicker lists into csv files
 
 # whats working
-`testscraping.py` parses the contents of `pcpartpicker-test-page.html` into plain text creating a csv with columns for the component type, component name, price of the component, and the link to every site which the component can be found
+`testscraping.py` creates a csv from a user inputted pcpartpicker list formatted: `pcpartpicker.com/list/`
 
 # whats not working
-1. request data from live webpages
+1. needs to parse the price correctly
+2. put on the internet
+

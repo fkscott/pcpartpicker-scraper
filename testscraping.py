@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from csv import writer
 
-url = raw_input("please a pcpartpicker list url (formatted pcpartpicker.com/list/) : ")
+url = input("please a pcpartpicker list url (formatted pcpartpicker.com/list/) : ")
 
 #open the test file and read its contents into a soup objet
 response = requests.get(url)
@@ -26,13 +26,12 @@ with open('parts.csv','w') as csv_file:
         #specific component names (selections)
         component_names = part.find(class_='td__name').get_text().replace('\n','')
 
-        #the price of the components 
+        #the price of the components
         #using two 'replace()' here because the whitespace got really messy in the get_text() section
         component_prices = part.find(class_='td__price').get_text().replace('\n','').replace(' ','')
 
         #get the links from the 'td__name' class
         component_links = "https://pcpartpicker.com"+part.find(class_='td__name').a['href']
-        
-        
-        csv_writer.writerow([component_types,component_names,component_prices,component_links])
 
+
+        csv_writer.writerow([component_types,component_names,component_prices,component_links])

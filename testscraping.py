@@ -28,7 +28,7 @@ with open('parts.csv','w') as csv_file:
 
         #the price of the components
         #using two 'replace()' here because the whitespace got really messy in the get_text() section
-        component_prices = part.find(class_='td__price').get_text().replace('\n','').replace(' ','')
+        component_prices = part.find(class_='td__base').get_text().replace('\n','').replace(' ','').replace('Base','')
 
         #get the links from the 'td__name' class
         component_links = "https://pcpartpicker.com"+part.find(class_='td__name').a['href']

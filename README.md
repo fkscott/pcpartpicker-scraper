@@ -1,10 +1,8 @@
 ## pcpartpicker-scraper
-converts pcpartpicker lists into csv files
+Converts pcpartpicker lists into csv files. This is helpful if you'd like to create a spreadsheet with all your build information. The script utilizes Beatiful Soup to parse through the HTML and write to a csv file.
 
-# whats working
-`testscraping.py` creates a csv from a user inputted pcpartpicker list formatted: `pcpartpicker.com/list/`
+`convert.py` creates a csv from a user inputted pcpartpicker list formatted: `pcpartpicker.com/list/`
 
-# whats not working
-1. needs to parse the price correctly
-2. put on the internet
+## Dependencies Needed
 
+To run this python script, you will need `bs4` and `requests`
